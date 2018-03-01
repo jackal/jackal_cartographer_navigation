@@ -12,11 +12,14 @@ Open three new terminal/tabs, source the workspace and launch the Gazebo, RViz, 
 
 `source install_isolated/setup.bash`
 
-Launch the Gazebo simulation with the front_laser config
+Launch the Gazebo simulation with the front_laser config:
+
 `roslaunch jackal_gazebo jackal_world.launch config:=front_laser`
 
-Launch RViz to visualize the robot
+Launch RViz to visualize the robot:
+
 `roslaunch jackal_viz view_robot.launch config:=gmapping`
 
-Launch the Cartographer node to begin SLAM
+Launch the Cartographer node to begin SLAM:
+
 `roslaunch jackal_navigation cartographer_demo.launch`
