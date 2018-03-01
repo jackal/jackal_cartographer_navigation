@@ -1,5 +1,5 @@
 <launch>
-  <arg name="config" default="front_laser" />
+  <arg name="config" default="base" />
 
   <param name="robot_description"
          command="$(find jackal_description)/scripts/env_run
