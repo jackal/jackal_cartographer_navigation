@@ -2,16 +2,17 @@
 sudo apt-get update
 sudo apt-get install -y python-wstool python-rosdep ninja-build
 
-# Create a new workspace in 'catkin_ws'.
+# Create a new workspace in 'cartographer_ws'.
 mkdir cartographer_ws
 cd cartographer_ws
 wstool init src
+cp -r ./jackal_cartographer_navigation ./cartographer_ws/src
 
 # Merge the cartographer_ros.rosinstall file and fetch code for dependencies.
 wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
 wstool update -t src
 
-# Build and install in 'catkin_ws/protobuf/install' proto3.
+# Build and install in 'cartographer_ws/protobuf/install' proto3.
 #set -o errexit
 set -o verbose
 VERSION="v3.4.1"
