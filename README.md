@@ -10,9 +10,7 @@ Run the following script to create a workspace and install the packages required
 
 Open three new terminal/tabs, source the workspace and launch the Gazebo, RViz, and Cartographer files
 
-```
-source install_isolated/setup.bash
-roslaunch jackal_gazebo jackal_world.launch config:=front_laser
-roslaunch jackal_viz view_robot.launch config:=gmapping
-roslaunch jackal_navigation cartographer_demo.launch
-```
+`source install_isolated/setup.bash`
+`roslaunch jackal_gazebo jackal_world.launch config:=front_laser`
+`roslaunch jackal_viz view_robot.launch config:=gmapping`
+`roslaunch jackal_navigation cartographer_demo.launch`
