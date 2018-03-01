@@ -1,0 +1,53 @@
+<launch>
+  <arg name="use_sim_time" default="true" />
+  <arg name="gui" default="true" />
+  <arg name="headless" default="false" />
+  <arg name="world_name" default="$(find jackal_gazebo)/worlds/jackal_race.world" />
+
+  <!-- Short-term hack to support the original front_laser:=true argument for spawning
+       the simulator. This will be removed in favour of using the config:=x arg instead. -->
+  <arg name="front_laser" default="true" />
+  <arg name="default_config" value="front_laser" if="$(arg front_laser)" />
+  <arg name="default_config" value="base" unless="$(arg front_laser)" /> 
+  <!-- end of hack -->
+
+  <!-- Configuration of Jackal which you would like to simulate.
+       See jackal_description for details. -->
+  <arg name="config" default="$(arg default_config)" />
+
+  <!-- Launch Gazebo with the specified world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="debug" value="0" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="use_sim_time" value="$(arg use_sim_time)" />
+    <arg name="headless" value="$(arg headless)" />
+    <arg name="world_name" value="$(arg world_name)" />
+  </include>
+
+  <!-- Load Jackal's description, controllers, and teleop nodes. -->
+  <include file="$(find jackal_description)/launch/description.launch">
+    <arg name="config" value="$(arg config)" />
+  </include>
+  <include file="$(find jackal_control)/launch/control.launch" />
+  <include file="$(find jackal_control)/launch/teleop.launch">
+    <arg name="joystick" value="false"/>
+  </include>
+
+  <!-- Spawn Jackal -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model"
+	      args="-urdf -model jackal -param robot_description -x 0 -y 0 -z 1.0" />
+
+  <!-- Loading MICO-2 3 Finger Arm controller >
+  <rosparam file="$(find kinova_control)/config/m1n6s300_control.yaml" command="load"/>
+
+  <node name="m1n6s300_trajectory_controller" pkg="controller_manager" type="spawner" args="effort_joint_trajectory_controller
+      effort_finger_trajectory_controller joint_state_controller"/>  
+  <node name="command_robot_home_pose" pkg="kinova_control" type="move_robot.py"
+        respawn="false" output="screen" args="m1n6s300">       
+  </node-->
+
+  <!-- Loading Flir-PTU controller>
+  <rosparam command="load" file="$(find flir_ptu_description)/config/control_flir_ptu.yaml" />
+  <node name="flir_ptu_controller" pkg="controller_manager" type="spawner" args="flir_ptu_controller"/-->
+
+</launch>
