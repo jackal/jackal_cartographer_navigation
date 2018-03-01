@@ -6,7 +6,7 @@ sudo apt-get install -y python-wstool python-rosdep ninja-build
 mkdir cartographer_ws
 cd cartographer_ws
 wstool init src
-cp -r ./jackal_cartographer_navigation ./cartographer_ws/src
+cp -r ../jackal_cartographer_navigation ./src
 
 # Merge the cartographer_ros.rosinstall file and fetch code for dependencies.
 wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
