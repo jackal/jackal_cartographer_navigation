@@ -42,6 +42,6 @@ To adapt this demo to your own Jackal, you may need to clone the [jackal_cartogr
 
 #### Tuning Cartographer
 
-To tune Cartographer for low latency SLAM, edit the *jackal.lua* configuration file found in the *jackal_cartographer_navigation* directory.
+To tune Cartographer for low latency SLAM, edit the *jackal.lua* configuration file found in the *jackal_cartographer_navigation/config* directory.
 
 For more information on tuning, click [here](http://google-cartographer-ros.readthedocs.io/en/latest/tuning.html)
