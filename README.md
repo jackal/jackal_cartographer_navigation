@@ -28,7 +28,7 @@ To adapt this demo to your own Jackal, you may need to clone the [jackal_cartogr
 
       3. Launch the Cartographer node to begin SLAM:
 
-         `roslaunch jackal_navigation cartographer_demo.launch`
+         `roslaunch jackal_cartographer_navigation cartographer_demo.launch`
 
   4. In the Rviz visualizer, make sure the visualizers in the Navigation group are enabled.
 
