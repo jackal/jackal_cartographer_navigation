@@ -6,7 +6,7 @@ To adapt this demo to your own Jackal, you may need to clone the [jackal_cartogr
 
 ## Instructions
 
-1. To get started with 2-D SLAM using Google Cartographer, clone this repository into your working directory:
+  1. To get started with 2-D SLAM using Google Cartographer, clone this repository into your working directory:
 
    `git clone http://gitlab.clearpathrobotics.com/research/jackal_cartographer_navigation.git`
 
