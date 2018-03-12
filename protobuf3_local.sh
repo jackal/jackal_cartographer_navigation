@@ -7,6 +7,8 @@ mkdir cartographer_ws
 cd cartographer_ws
 wstool init src
 cp -r ../jackal_cartographer_navigation ./src
+git -C ./src clone https://github.com/jackal/jackal_desktop
+git -C ./src clone https://github.com/jackal/jackal_simulator
 
 # Merge the cartographer_ros.rosinstall file and fetch code for dependencies.
 wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
