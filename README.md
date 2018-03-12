@@ -8,15 +8,15 @@ To adapt this demo to your own Jackal, you may need to clone the [jackal_cartogr
 
   1. To get started with 2-D SLAM using Google Cartographer, clone this repository into your working directory:
 
-   `git clone http://gitlab.clearpathrobotics.com/research/jackal_cartographer_navigation.git`
+     `git clone http://gitlab.clearpathrobotics.com/research/jackal_cartographer_navigation.git`
 
-2. Run the following script to create a workspace and install proto3. This script will also install the packages required to use Cartographer as well as the [jackal_desktop](https://github.com/jackal/jackal_desktop) and [jackal_simulator](https://github.com/jackal/jackal_simulator) packages:
+  2. Run the following script to create a workspace and install proto3. This script will also install the packages required to use Cartographer as well as the [jackal_desktop](https://github.com/jackal/jackal_desktop) and [jackal_simulator](https://github.com/jackal/jackal_simulator) packages:
 
-   `source $(pwd)/jackal_cartographer_navigation/protobuf3_local.sh`
+     `source $(pwd)/jackal_cartographer_navigation/protobuf3_local.sh`
 
-3. Open three new terminal/tabs, source the workspace for each terminal/tab:
+  3. Open three new terminal/tabs, source the workspace for each terminal/tab:
 
-   `source install_isolated/setup.bash`
+     `source install_isolated/setup.bash`
 
     1. Launch the Gazebo simulation with the *front_laser* config:
 
