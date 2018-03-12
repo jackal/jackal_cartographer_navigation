@@ -18,27 +18,27 @@ To adapt this demo to your own Jackal, you may need to clone the [jackal_cartogr
 
      `source install_isolated/setup.bash`
 
-    1. Launch the Gazebo simulation with the *front_laser* config:
+      1. Launch the Gazebo simulation with the *front_laser* config:
 
-       `roslaunch jackal_gazebo jackal_world.launch config:=front_laser`
+         `roslaunch jackal_gazebo jackal_world.launch config:=front_laser`
 
-    2. Launch RViz to visualize the robot:
+      2. Launch RViz to visualize the robot:
 
-       `roslaunch jackal_viz view_robot.launch config:=gmapping`
+         `roslaunch jackal_viz view_robot.launch config:=gmapping`
 
-    3. Launch the Cartographer node to begin SLAM:
+      3. Launch the Cartographer node to begin SLAM:
 
-       `roslaunch jackal_navigation cartographer_demo.launch`
+         `roslaunch jackal_navigation cartographer_demo.launch`
 
-4. In the Rviz visualizer, make sure the visualizers in the Navigation group are enabled.
+  4. In the Rviz visualizer, make sure the visualizers in the Navigation group are enabled.
 
-5. Use the 2D Nav Goal tool in the top toolbar to select a movement goal in the visualizer. Make sure to select an unoccupied (dark grey) or unexplored (light grey) location.
+  5. Use the 2D Nav Goal tool in the top toolbar to select a movement goal in the visualizer. Make sure to select an unoccupied (dark grey) or unexplored (light grey) location.
 
-6. As the robot moves, you should see the grey static map (map topic) grow. There might be discrete jumps in the map as the Cartographer algorithm attempts to localize the robot.
+  6. As the robot moves, you should see the grey static map (map topic) grow. There might be discrete jumps in the map as the Cartographer algorithm attempts to localize the robot.
 
-7. To save the generated map, you can run the map_saver utility:
+  7. To save the generated map, you can run the map_saver utility:
 
-   `rosrun map_server map_saver -f <filename>`
+     `rosrun map_server map_saver -f <filename>`
 
 #### Tuning Cartographer
 
