@@ -14,6 +14,11 @@ git -C ./src clone https://github.com/jackal/jackal
 # Merge the cartographer_ros.rosinstall file and fetch code for dependencies.
 wstool merge -t src https://raw.githubusercontent.com/googlecartographer/cartographer_ros/master/cartographer_ros.rosinstall
 wstool update -t src
+cd src/cartographer
+git checkout 0.3.0
+cd ../cartographer_ros
+git checkout 0.3.0
+cd ../..
 
 # Build and install in 'cartographer_ws/protobuf/install' proto3.
 #set -o errexit
