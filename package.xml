@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>jackal_cartographer_navigation</name>
-  <version>0.5.3</version>
+  <version>0.0.0</version>
   <description>Launch files and code for autonomous navigation of the Jackal using Google Cartographer</description>
   <author email="spourmehr@clearpathrobotics.com">Shokoofeh Pourmehr</author>
   <maintainer email="mpurvis@clearpathrobotics.com">Mike Purvis</maintainer>
