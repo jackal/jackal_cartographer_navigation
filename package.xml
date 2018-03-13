@@ -3,8 +3,8 @@
   <name>jackal_cartographer_navigation</name>
   <version>0.0.0</version>
   <description>Launch files and code for autonomous navigation of the Jackal using Google Cartographer</description>
-  <author email="spourmehr@clearpathrobotics.com">Shokoofeh Pourmehr</author>
-  <maintainer email="mpurvis@clearpathrobotics.com">Mike Purvis</maintainer>
+  <author email="abhattacharjee@clearpathrobotics.com">Aditya Bhattacharjee</author>
+  <maintainer email="abhattacharjee@clearpathrobotics.com">Aditya Bhattacharjee</maintainer>
   <license>BSD</license>
 
   <buildtool_depend>catkin</buildtool_depend>
