@@ -47,6 +47,8 @@ rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
 
 # Build and install.
+source /opt/ros/melodic/setup.bash
 catkin_make_isolated --install --use-ninja \
   -DCMAKE_PREFIX_PATH="${PWD}/install_isolated;${PWD}/protobuf/install;${CMAKE_PREFIX_PATH}"
 source install_isolated/setup.bash
+set +o verbose
