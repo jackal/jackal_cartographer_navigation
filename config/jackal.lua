@@ -75,7 +75,7 @@ TRAJECTORY_BUILDER_2D.loop_closure_adaptive_voxel_filter.min_num_points = 50 -- 
 TRAJECTORY_BUILDER_2D.loop_closure_adaptive_voxel_filter.max_range = 10. -- Decrease
 TRAJECTORY_BUILDER_2D.loop_closure_adaptive_voxel_filter.max_length = 1.8 -- Increase
 TRAJECTORY_BUILDER_2D.voxel_filter_size = 0.05 -- Increase
-TRAJECTORY_BUILDER_2D.submaps.resolution=0.05 -- Increase
+-- TRAJECTORY_BUILDER_2D.submaps.resolution=0.05 -- Increase
 TRAJECTORY_BUILDER_2D.submaps.num_range_data = 1 -- Decrease
 TRAJECTORY_BUILDER_2D.max_range = 10. -- Decrease
 
