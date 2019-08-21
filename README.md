@@ -1,36 +1,30 @@
 # Jackal Cartographer Demo
 
-# TODO: update installation steps to use deb release of cartographer ros
-
 This tutorial shows you how to use [move_base](http://wiki.ros.org/move_base) with [Google Cartographer](https://github.com/googlecartographer) to perform autonomous planning and movement with simultaneous localization and mapping (SLAM), on a simulated Jackal, or a factory-standard Jackal with a laser scanner publishing on the */front/scan* topic.
 
 To adapt this demo to your own Jackal, you may need to clone the [jackal_cartographer_navigation](http://github.com/jackal/jackal_cartographer_navigation.git) repository, and modify the relevant parameters. To learn about move_base and the navigation stack, see the [Navigation Tutorials](http://wiki.ros.org/navigation/Tutorials). To learn more about Google Cartographer for ROS, see the [Cartographer ROS](https://google-cartographer-ros.readthedocs.io/en/latest/) documentation.
 
 ## Instructions
 
-  1. To get started with 2-D SLAM using Google Cartographer, clone this repository into your working directory:
+  1. To get started with 2-D SLAM using Google Cartographer, clone this repository into your working directory (e.g. catkin_ws):
 
      `git clone http://github.com/jackal/jackal_cartographer_navigation.git`
 
-  2. Run the following script to create a workspace and install proto3. This script will also install the packages required to use Cartographer as well as the [jackal_desktop](https://github.com/jackal/jackal_desktop), [jackal](https://github.com/jackal/jackal), and [jackal_simulator](https://github.com/jackal/jackal_simulator) packages:
+  2. Install the following ROS packages:
 
-     `source $(pwd)/jackal_cartographer_navigation/protobuf3_local.sh`
+      `sudo apt-get install ros-melodic-jackal-* ros-melodic-cartographer`
 
-  3. Open three new terminal/tabs, source the workspace for each terminal/tab:
+  3. Open two new terminal/tabs, source the workspace for each terminal/tab:
 
-     `source install_isolated/setup.bash`
+     `source devel/setup.bash`
 
-      1. Launch the Gazebo simulation with the *front_laser* config:
+      - Launch the Gazebo simulation with the *front_laser* config:
 
-         `roslaunch jackal_gazebo jackal_world.launch config:=front_laser`
+        `roslaunch jackal_gazebo jackal_world.launch config:=front_laser`
 
-      2. Launch RViz to visualize the robot:
+      - Launch the Cartographer node to begin SLAM (NOTE: This also launches RViz to visualize the robot):
 
-         `roslaunch jackal_viz view_robot.launch config:=gmapping`
-
-      3. Launch the Cartographer node to begin SLAM:
-
-         `roslaunch jackal_cartographer_navigation cartographer_demo.launch`
+        `roslaunch jackal_cartographer_navigation cartographer_demo.launch`
 
   4. In the Rviz visualizer, make sure the visualizers in the Navigation group are enabled.
 
