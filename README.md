@@ -12,9 +12,9 @@ To adapt this demo to your own Jackal, you may need to clone the [jackal_cartogr
 
   2. Install the following ROS packages:
 
-      `sudo apt-get install ros-melodic-jackal-* ros-melodic-cartographer`
+      `sudo apt-get install ros-melodic-jackal-* ros-melodic-cartographer-ros`
 
-  3. Open two new terminal/tabs, source the workspace for each terminal/tab:
+  3. Build the workspace and open two new terminal/tabs, source the workspace for each terminal/tab:
 
      `source devel/setup.bash`
 
@@ -31,6 +31,8 @@ To adapt this demo to your own Jackal, you may need to clone the [jackal_cartogr
   5. Use the 2D Nav Goal tool in the top toolbar to select a movement goal in the visualizer. Make sure to select an unoccupied (dark grey) or unexplored (light grey) location.
 
   6. As the robot moves, you should see the grey static map (map topic) grow. There might be discrete jumps in the map as the Cartographer algorithm attempts to localize the robot.
+
+  ![Jackal Racetrack Map](jackal_cartographer.png)
 
   7. To save the generated map, you can run the map_saver utility:
 
