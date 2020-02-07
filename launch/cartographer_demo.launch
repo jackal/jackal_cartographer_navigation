@@ -37,6 +37,9 @@
     </rosparam>
   </node-->
 
+  <!-- Run RViz Node -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jackal_cartographer_navigation)/cartographer.rviz" output="screen"/>
+
   <!--- Run Move Base -->
   <include file="$(find jackal_navigation)/launch/include/move_base.launch" />
 
