@@ -2,8 +2,8 @@
 Changelog for package jackal_cartographer_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.1 (2020-02-20)
+------------------
 * Updated maintainer.
 * Removed rviz to use jackal_viz.
 * Merge pull request `#2 <https://github.com/jackal/jackal_cartographer_navigation/issues/2>`_ from ljazzal/master
