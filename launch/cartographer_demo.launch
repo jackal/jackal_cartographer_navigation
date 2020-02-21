@@ -28,18 +28,6 @@
   <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
       type="cartographer_occupancy_grid_node" args="-resolution 0.05" />
 
-  <!--node name="tf_remove_frames" pkg="cartographer_ros"
-      type="tf_remove_frames.py">
-    <remap from="tf_out" to="/tf" />
-    <rosparam param="remove_frames">
-      - map
-      - odom_combined
-    </rosparam>
-  </node-->
-
-  <!-- Run RViz Node -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find jackal_cartographer_navigation)/cartographer.rviz" output="screen"/>
-
   <!--- Run Move Base -->
   <include file="$(find jackal_navigation)/launch/include/move_base.launch" />
 

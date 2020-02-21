@@ -10,9 +10,9 @@ To adapt this demo to your own Jackal, you may need to clone the [jackal_cartogr
 
      `git clone http://github.com/jackal/jackal_cartographer_navigation.git`
 
-  2. Install the following ROS packages:
+  2. Install the dependencies in your workspace (e.g. catkin_ws):
 
-      `sudo apt-get install ros-melodic-jackal-* ros-melodic-cartographer-ros`
+     `rosdep install --from-paths src --ignore-src --rosdistro=$ROS_DISTRO -y`
 
   3. Build the workspace and open two new terminal/tabs, source the workspace for each terminal/tab:
 
@@ -22,9 +22,12 @@ To adapt this demo to your own Jackal, you may need to clone the [jackal_cartogr
 
         `roslaunch jackal_gazebo jackal_world.launch config:=front_laser`
 
-      - Launch the Cartographer node to begin SLAM (NOTE: This also launches RViz to visualize the robot):
+      - Launch the Cartographer node to begin SLAM:
 
         `roslaunch jackal_cartographer_navigation cartographer_demo.launch`
+
+      - Launch Rviz:
+        `roslaunch jackal_viz view_robot.launch`
 
   4. In the Rviz visualizer, make sure the visualizers in the Navigation group are enabled.
 
